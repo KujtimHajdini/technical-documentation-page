@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+ 
+    
+    <nav id="navbar">
+      <header> Python (programming language) </header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#History">History</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Design_philosophy_and_features">Design philosophy and features</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Syntax_and_semantics">Syntax and semantics</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Programming_examples">Programming examples</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Libraries">Libraries</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Development_environments">Development environments</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Implementations">Implementations</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Other_implementations">Other implementations</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Development">Development</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Languages_influenced_by_Python">Languages influenced by Python</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Robotics">Robotics</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Cross_compilers_to_other_languages">Cross compilers to other languages</a></li>
+         <li> <a class="nav-link" href="#Reference">Reference</a>
+        </li>
+      </ul>
+    </nav>
+
+<main id="main-doc">
+<section id="Introduction" class="main-section">
+    <header>Introduction</header>
+    <article>
+    <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.</p>
+        <p>Python is dynamically type-checked and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library. </p>
+        <ul>
+        <li>Guido van Rossum began working on Python in the late 1980s as a successor to the ABC programming language and first released it in 1991 as Python 0.9.0.</li>
+            <li>Python 2.0 was released in 2000. Python 3.0, released in 2008, was a major revision not completely backward-compatible with earlier versions. Python 2.7.18, released in 2020, was the last release of Python 2.</li>
+        </ul>
+    </article>
+    </section>
+
+    <section id="History" class="main-section">
+        <header>History</header>
+        <article>
+        <p>Python was conceived in the late 1980s[42] by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC programming language, which was inspired by SETL, capable of exception handling and interfacing with the Amoeba operating system.</p>
+            <ul>
+                <li>Its implementation began in December 1989. </li>
+                <li>The name Python is said to come from the British comedy series Monty Python's Flying Circus.</li>
+                <li>PEP 711 proposes PyBI: a standard format for distributing Python Binaries.</li>
+            </ul>
+        </article>
+    </section>
+    
+    <section id="Design_philosophy_and_features" class="main-section">
+        <header>Design philosophy and features</header>
+        <article>
+            <p>Python is a multi-paradigm programming language. Object-oriented programming and structured programming are fully supported, and many of their features support functional programming and aspect-oriented programming (including metaprogramming and metaobjects).</p>
+            <p>Many other paradigms are supported via extensions, including design by contract and logic programming. Python is often referred to as a 'glue language' because it can seamlessly integrate components written in other languages. </p>
+            <p>Python uses dynamic typing and a combination of reference counting and a cycle-detecting garbage collector for memory management. It uses dynamic name resolution (late binding), which binds method and variable names during program execution.  </p>
+        </article>
+    </section>
+    
+    <section id="Syntax_and_semantics" class="main-section">
+    <header>Syntax and semantics</header>
+        <article>
+            Python is meant to be an easily readable language. Its formatting is visually uncluttered and often uses English keywords where other languages use punctuation. Unlike many other languages, it does not use curly brackets to delimit blocks, and semicolons after statements are allowed but rarely used. It has fewer syntactic exceptions and special cases than C or Pascal.
+           Python uses whitespace indentation, rather than curly brackets or keywords, to delimit blocks. An increase in indentation comes after certain statements; a decrease in indentation signifies the end of the current block.[95] Thus, the program's visual structure accurately represents its semantic structure.[96] This feature is sometimes termed the off-side rule. Some other languages use indentation this way; but in most, indentation has no semantic meaning. The recommended indent size is four spaces.
+        </article>
+    </section>
+    
+    <section id="Programming_examples" class="main-section">
+    <header>Programming examples</header>
+        <p>"Hello, World!" program: </p>
+        <code>print('Hello, world!') </code>
+        <p>Program to calculate the factorial of a positive integer: </p>
+        <code>n = int(input('Type a number, and its factorial will be printed: '))
+
+            if n &lt; 0:
+            raise ValueError('You must enter a non-negative integer')
+
+            factorial = 1
+            for i in range(2, n + 1):
+            factorial *= i
+
+            print(factorial)
+        </code>
+            <code>print('Python is powerful')</code>
+            <code>print('Good Morning!')
+print('It is rainy today')</code>
+            <code># print with end whitespace
+print('Good Morning!', end= ' ')
+
+print('It is rainy today')</code>
+    </section>
+    
+    <section id="Libraries" class="main-section">
+        <header>Libraries</header>
+        <article> 
+            <p>Python's large standard library is commonly cited as one of its greatest strengths. For Internet-facing applications, many standard formats and protocols such as MIME and HTTP are supported. It includes modules for creating graphical user interfaces, connecting to relational databases, generating pseudorandom numbers, arithmetic with arbitrary-precision decimals, manipulating regular expressions, and unit testing. </p>
+            <p>Some parts of the standard library are covered by specifications—for example, the Web Server Gateway Interface (WSGI) implementation wsgiref follows PEP 333[134]—but most are specified by their code, internal documentation, and test suites. However, because most of the standard library is cross-platform Python code, only a few modules need altering or rewriting for variant implementations. </p>
+            <p>As of 13 March 2025, the Python Package Index (PyPI), the official repository for third-party Python software, contains over 614,339 packages with a wide range of functionality, including: </p>
+            <ul>
+                <li>Automation</li>
+                <li>Data analytics</li>
+                <li>Databases</li>
+                <li>Documentation</li>
+                <li>Graphical user interfaces</li>
+                <li>Image processing</li>
+                <li>Machine learning</li>
+                <li>Mobile apps</li>
+                <li>Multimedia</li>
+                <li>Computer networking</li>
+                <li>Scientific computing</li>
+                <li>System administration</li>
+                <li>Test frameworks</li>
+                <li>Text processing</li>
+                <li>Web frameworks</li>
+                <li>Web scraping</li>
+            </ul>
+        </article>
+    </section>
+    
+    <section id="Development_environments" class="main-section">
+    <header>Development environments</header>
+        <article>
+        <p>Most Python implementations (including CPython) include a read–eval–print loop (REPL), permitting them to function as a command line interpreter for which users enter statements sequentially and receive results immediately. Python also comes with an Integrated development environment (IDE) called IDLE, which is more beginner-oriented. </p>
+            <p>Other shells, including IDLE and IPython, add further abilities such as improved auto-completion, session state retention, and syntax highlighting. As well as standard desktop integrated development environments including PyCharm, IntelliJ Idea, Visual Studio Code etc, there are web browser-based IDEs, including SageMath, for developing science- and math-related programs; PythonAnywhere, a browser-based IDE and hosting environment; and Canopy IDE, a commercial IDE emphasizing scientific computing.</p>
+        </article>
+    </section>
+    
+    <section id="Implementations" class="main-section">
+        <header>Implementations</header>
+    <article>
+        <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax. </p>
+        <p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber. </p>
+        </article>
+    </section>
+    
+    <section id="Other_implementations" class="main-section">
+    <header>Other implementations</header>
+        <article>
+        <p>CPython is the reference implementation of Python. It is written in C, meeting the C89 standard (Python 3.11 uses C11) with several select C99 features. CPython includes its own C extensions, but third-party extensions are not limited to older C versions—e.g. they can be implemented with C11 or C++. CPython compiles Python programs into an intermediate bytecode which is then executed by its virtual machine.</p>
+            <p>Stackless Python is a significant fork of CPython that implements microthreads; it does not use the call stack in the same way, thus allowing massively concurrent programs. PyPy also has a stackless version.
+MicroPython and CircuitPython are Python 3 variants optimized for microcontrollers, including Lego Mindstorms EV3.
+Pyston is a variant of the Python runtime that uses just-in-time compilation to speed up the execution of Python programs.</p>
+           
+        </article>
+    </section>
+    
+    <section id="Development" class="main-section">
+    <header>Development</header>
+        <article>
+        <p>Python's development is conducted largely through the Python Enhancement Proposal (PEP) process, the primary mechanism for proposing major new features, collecting community input on issues, and documenting Python design decisions. Python coding style is covered in PEP 8. Outstanding PEPs are reviewed and commented on by the Python community and the steering council.</p>
+           <p>Python can serve as a scripting language for web applications, e.g. via mod_wsgi for the Apache webserver.[209] With Web Server Gateway Interface, a standard API has evolved to facilitate these applications. Web frameworks like Django, Pylons, Pyramid, TurboGears, web2py, Tornado, Flask, Bottle, and Zope support developers in the design and maintenance of complex applications. Pyjs and IronPython can be used to develop the client-side of Ajax-based applications. SQLAlchemy can be used as a data mapper to a relational database. Twisted is a framework to program communications between computers, and is used (for example) by Dropbox. </p>
+            <p>Libraries such as NumPy, SciPy and Matplotlib allow the effective use of Python in scientific computing, with specialized libraries such as Biopython and Astropy providing domain-specific functionality. SageMath is a computer algebra system with a notebook interface programmable in Python: its library covers many aspects of mathematics, including algebra, combinatorics, numerical mathematics, number theory, and calculus. OpenCV has Python bindings with a rich set of features for computer vision and image processing. Python is commonly used in artificial intelligence projects and machine learning projects with the help of libraries like TensorFlow, Keras, Pytorch, scikit-learn and the Logic language ProbLog. As a scripting language with a modular architecture, simple syntax, and rich text processing tools, Python is often used for natural language processing.</p>
+        </article>
+    </section>
+    
+    <section id="Languages_influenced_by_Python" class="main-section">
+    <header>Languages influenced by Python</header>
+    <article>Python's design and philosophy have influenced many other programming languages: 
+       <ul>
+           <li>Boo - uses indentation, a similar syntax, and a similar object model.</li>
+           <li>Cobra - uses indentation and a similar syntax, and its Acknowledgements document lists Python first among languages that influenced it.</li>
+           <li>CoffeeScript, a programming language that cross-compiles to JavaScript, has Python-inspired syntax.</li>
+           <li>ECMAScript–JavaScript borrowed iterators and generators from Python.</li>
+           <li>GDScript, a scripting language very similar to Python, built-in to the Godot game engine.</li>
+           <li>Go is designed for the "speed of working in a dynamic language like Python" and shares the same syntax for slicing arrays.</li>
+           <li>Groovy was motivated by the desire to bring the Python design philosophy to Java.</li>
+           <li>Julia was designed to be "as usable for general programming as Python".</li>
+           <li>Mojo is a non-strict superset of Python (e.g. still missing classes, and adding e.g. struct).</li>
+           <li>Nim uses indentation and similar syntax.</li>
+           <li>Ruby's creator, Yukihiro Matsumoto, has said: "I wanted a scripting language that was more powerful than Perl, and more object-oriented than Python. That's why I decided to design my own language."</li>
+           <li>Swift, a programming language developed by Apple, has some Python-inspired syntax.</li>
+           <li>Kotlin blends Python and Java features, minimizing boilerplate code for enhanced developer efficiency.</li>
+        </ul>
+        </article>
+    </section>
+    
+    <section id="Robotics" class="main-section">
+    <header>Robotics</header>
+    <article>
+        Pyro stands for Python Robotics. The goal of the project is to provide a programming environment for easily exploring advanced topics in artificial intelligence and robotics without having to worry about the low-level details of the underlying hardware. That is not to say that Pyro is just a toy. In fact, Pyro is used for real robotics research as well as courseware. Pyro is written in Python. Python is an interpreted language, which means that you can experiment interactively with your robot programs. In addition to being an environment, Pyro is also a collection of object classes in Python. Because Pyro abstracts all of the underlying hardware details, it can be used for experimenting with several different types of mobile robots and robot simulators. Until now, it has been necessary to learn very different and specific control languages for different mobile robots, particularly those manufactured by different companies. Now, a single language can be used to program many different robots, allowing code to be shared across platforms as well as allowing students to experiment with different robots while learning a single language and environment. 
+        </article>
+    </section>
+    
+    <section id="Cross_compilers_to_other_languages" class="main-section">
+    <header>Cross compilers to other languages</header>
+        <article>
+         There are several compilers/transpilers to high-level object languages, with either unrestricted Python, a restricted subset of Python, or a language similar to Python as the source language: 
+            <ul>
+                <li>Brython, Transcrypt and Pyjs (latest release in 2012) compile Python to JavaScript.</li>
+                <li>Cython compiles (a superset of) Python to C. The resulting code is also usable with Python via direct C-level API calls into the Python interpreter.</li>
+                <li>PyJL compiles/transpiles a subset of Python to "human-readable, maintainable, and high-performance Julia source code". Despite claiming high performance, no tool can claim to do that for arbitrary Python code; i.e. it's known not possible to compile to a faster language or machine code. Unless semantics of Python are changed, but in many cases speedup is possible with few or no changes in the Python code. The faster Julia source code can then be used from Python, or compiled to machine code, and based that way.</li>
+                <li>Nuitka compiles Python into C. It works with Python 3.4 to 3.12 (and 2.6 and 2.7), for Python's main supported platforms (and Windows 7 or even Windows XP) and for Android. It claims complete support for Python 3.10, some support for 3.11 and 3.12 and experimental support for Python 3.13. It supports macOS including Apple Silicon-based. It's a free compiler, though it also has commercial add-ons (e.g. for hiding source code).</li>
+                <li>Numba is used from Python, as a tool (enabled by adding a decorator to relevant Python code), a JIT compiler that translates a subset of Python and NumPy code into fast machine code.</li>
+                <li>Pythran compiles a subset of Python 3 to C++ (C++11).</li>
+                <li>MyHDL is a Python-based hardware description language (HDL), that converts MyHDL code to Verilog or VHDL code.</li>
+            </ul>
+            
+        </article>
+    </section>
+    
+    <section id="Reference" class="main-section">
+    <header>Reference</header>
+        <ul>
+        <li>All the documentation in this page is taken from <a href="https://en.wikipedia.org/wiki/Python_(programming_language)#" target="_blank">Wikipedia</a></li>
+        </ul>
+    </section>
+    
+</main>
+
+
+
+
+  </body>
+</html>
